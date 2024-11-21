@@ -28,7 +28,7 @@ def main():
     
     # You can choose which scoring method you'd like to use here:
     score = silhouette_score(df, predictions)
-    print(f"Silhouette Score: {score:.2f}")
+    print("Silhouette Score:", score)
     
     # Plot your data using plot_3d_clusters in visualization.py
     plot_3d_clusters(df, predictions, kmeans, score)
@@ -43,10 +43,10 @@ def main():
     
     # Plot the elbow plot
     plt.figure()
-    plt.plot(k_values, inertia_values, marker='o')
-    plt.xlabel('Number of Clusters (k)')
-    plt.ylabel('Inertia (SSE)')
-    plt.title('Elbow Method for Optimal k')
+    plt.title('Elbow Method to Optimize k')
+    plt.plot(k_values, inertia_values, marker='x')
+    plt.xlabel('Number of Clusters')
+    plt.ylabel('Inertia')
     plt.show()
     
     # Question: 

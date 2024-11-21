@@ -38,7 +38,6 @@ class KMeans():
         Args:
             matrix (np.ndarray): 
                 This will be a 2D matrix where rows are your observation and columns are features.
-                
                 Observation meaning, the specific flower observed.
                 Features meaning, the features the flower has: Petal width, length and sepal length width 
         """
